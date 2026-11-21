@@ -1,13 +1,16 @@
 #include <iostream>
 using namespace std;
-int hammingWeight(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    return hammingWeight(n / 2) + (n % 2);
-}
 int main() {
-    int n;
-    cin >> n;
-    cout << hammingWeight(n);
+    int number_teams;
+    cout<<"enter number of teams ";
+    cin >> number_teams;
+
+    int total_matches = 0;
+    while (number_teams > 1) {
+        total_matches += number_teams / 2;
+        number_teams = number_teams / 2 + number_teams % 2;
+    }
+
+    cout << total_matches << endl;
+    return 0;
 }

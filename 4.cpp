@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
-int minBitFlips(int start, int goal) {
-    if (start == 0 && goal == 0) {
-        return 0;
-    }
-    int flip = (start % 2 != goal % 2) ? 1 : 0;
-    return minBitFlips(start / 2, goal / 2) + flip;
-}
+
 int main() {
-    int start, goal;
-    cin >> start >> goal;
-    cout << minBitFlips(start, goal);
+	long long low;
+	long long high;
+    cout <<"enter high ";
+	cin >>high;
+cout <<"enter low ";
+cin>> low;
+	cout << (high + 1) / 2 - low / 2 << endl;
+	return 0;
 }

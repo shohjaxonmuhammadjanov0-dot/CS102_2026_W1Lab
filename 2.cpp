@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
-int fib(int n);
+
 int main() {
-    int n;
-    cin >> n;
-    cout << fib(n);
-}
-int fib(int n) {
-    if (n < 2) {
-        return n;
-    }
-    return fib(n - 1) + fib(n - 2);
+	int arrivalTime;
+	int delayedTime;
+    cout <<"enter arrival time "<<endl;
+    cin>>arrivalTime;
+    cout<<"enter delayed time "<<endl;
+    cin>>delayedTime;
+	cout << (arrivalTime + delayedTime) % 24 << endl;
+	return 0;
 }
